@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="_2._5.UserDay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_2._5"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" TextAlignment="Center" Name="Day_number"/>
+        <Image Source="/img/Пусто.png" Grid.Row="1" Grid.ColumnSpan="2"  Name="Photo" />
+        <Button Style="{x:Null}" Grid.RowSpan="2" Background="#00DDDDDD" BorderBrush="#B2C1B1B1" OpacityMask="#B2A79393" Foreground="#FFB39A9A" x:Name="Open" Click="Open_sost"  />
+    </Grid>
+</UserControl>

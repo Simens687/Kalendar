@@ -1,0 +1,46 @@
+﻿<Window x:Class="_2._5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2._5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="700">
+    <Grid Name="griiid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DatePicker Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="5" Name="Date_sel"
+            Style="{StaticResource MaterialDesignOutlinedDatePicker}" FirstDayOfWeek="Monday" SelectedDateFormat="Long" SelectedDateChanged="Sel" />
+
+        <Button Grid.Column="0" Grid.Row="0"
+            Style="{StaticResource MaterialDesignRaisedButton}"
+            ToolTip="Resource name: MaterialDesignRaisedButton"
+            Content="Прошлый"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Зкщвр_ьщтер" />
+
+        <Button Grid.Column="6" Grid.Row="0" Name="Next"
+            Style="{StaticResource MaterialDesignRaisedButton}"
+            ToolTip="Resource name: MaterialDesignRaisedButton"
+            Content="Некст"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="Туче_ьщтер" />
+
+        <Frame Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" Grid.RowSpan="7" Name="Dni" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="7" Name="Dels" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

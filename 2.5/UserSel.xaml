@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="_2._5.UserSel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:_2._5"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="400">
+    <Grid>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock  Grid.Column="2" TextAlignment="Center" Name="Opis" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Column="1"  Name="Photo" />
+        <RadioButton Grid.Column ="0" Grid.ColumnSpan="3" Background="#00DDDDDD" x:Name="Vibr" HorizontalAlignment="Left" Click="Cl" />
+    </Grid>
+</UserControl>
